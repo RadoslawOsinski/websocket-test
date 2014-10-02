@@ -4,7 +4,7 @@ apply plugin: 'idea'
 apply plugin: 'base'
 apply plugin: 'sonar-runner'
 
-groupId = "eu.cwsfe.websockets"
+group = "eu.com.cwsfe.websockets"
 version = "0.0.1-SNAPSHOT"
 description = "Websockets test"
 archivesBaseName = 'websocket_test'
@@ -37,15 +37,10 @@ compileJava {
 }
 
 dependencies {
-//    providedCompile group: 'javax.servlet.jsp', name: 'jsp-api', version: '2.2.1-b03'
-//    providedCompile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
-    //providedCompile group: 'org.jboss.spec.javax.jms', name: 'jboss-jms-api_2.0_spec', version: '1.0.0.Final'
-//    compile project(':AAAAA')
-//    compile group: 'net.sf.ehcache', name: 'ehcache-core', version: '2.6.6'
-//    compile group: 'net.sf.ehcache', name: 'ehcache-web', version: '2.0.4'
-//    testCompile group: 'org.springframework', name: 'spring-test', version: '4.0.6.RELEASE'
-//    testCompile group: 'junit', name: 'junit', version: '4.9'
-//    testCompile group: 'org.testng', name: 'testng', version: '6.3.1'
+    compile group: 'javax.websocket', name: 'javax.websocket-api', version: '1.0'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.0.2'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.0.2'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-web', version: '2.0.2'
 }
 
 sonarRunner {
